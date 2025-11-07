@@ -39,7 +39,7 @@ export default function About() {
               Tentang Kami
             </span>
             <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">
-              Meracik Keripik Peyek Terbaik Sejak 1945
+              Meracik Keripik Peyek Terbaik Sejak Tahun 1999
             </h1>
             <p className="text-base leading-relaxed text-slate-600">
               Berdiri dari dapur kecil di Yogyakarta, Peyek Andien lahir dari

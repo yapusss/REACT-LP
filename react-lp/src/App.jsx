@@ -21,7 +21,7 @@ export default function App() {
                 Peyek Andien
               </span>
               <span className="text-sm text-slate-400">
-                Rasa tradisional, orisinal
+                Rasa tradisional dengan sentuhan modern
               </span>
             </div>
           </Link>
