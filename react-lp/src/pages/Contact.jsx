@@ -32,9 +32,7 @@ export default function Contact() {
             <div className="mt-6 space-y-4 text-sm text-slate-600">
               <div>
                 <p className="font-semibold text-slate-900">Alamat</p>
-                <p className="mt-1">
-                  Jl. Wijaya Kusuma No. 21, Sleman, Yogyakarta
-                </p>
+                <p className="mt-1">Cikarang Selatan, Bekasi</p>
               </div>
               <div>
                 <p className="font-semibold text-slate-900">
