@@ -16,11 +16,11 @@ export default function App() {
           <Link className="hover:text-blue-600 transition" to="/">
             Home
           </Link>
-          <Link className="hover:text-blue-600 transition" to="/about">
-            Tentang
-          </Link>
           <Link className="hover:text-blue-600 transition" to="/produk">
             Produk
+          </Link>
+          <Link className="hover:text-blue-600 transition" to="/about">
+            Tentang
           </Link>
           <Link className="hover:text-blue-600 transition" to="/contact">
             Kontak

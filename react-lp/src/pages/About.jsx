@@ -1,11 +1,27 @@
 export default function About () {
    return (
      
-     <section className="About text-4xl font-bold text-center mt-10">
-      <h1>Tentang Kami</h1>
+     <section className="flex flex-col md:flex-row items-center justify-between min-h-screen bg-gradient-to-br from-pink-50 to-white px-10 md:px-20">
+      <div className="max-w-lg space-y-6">
+         <h1 className="text-7xl font-extrabold text-gray-900 leading-tight">
+          Tentang Kami<br />
+        </h1>
+        <p className="text-gray-600 text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
+      <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
       
-      <p>Kami berdiri sejak tahun 1945 dan bisnis kami bergerak dibidang keripik kacang atau yang biasa dikenal dengan peyek, Dan kami
-        Tidak main-main untuk persoalan kualitas dan rasa peyek kami sudah dipastikan sangat nikmat dan renyah.</p>
+      <img
+          src="Peyek3.jpg"
+          alt="Gambar Tentang Kami"
+          className="w-full max-w-md drop-shadow-xl"
+        />
+
+      </div>
+      
+   
      </section>
    );
 }
