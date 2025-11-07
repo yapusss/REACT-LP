@@ -69,7 +69,7 @@ export default function Home() {
             <div className="relative mx-auto max-w-md rounded-3xl bg-white/10 p-5 shadow-2xl shadow-blue-900/40 backdrop-blur">
               <div className="rounded-2xl bg-white/90 p-4">
                 <img
-                  src="kacang.jpg"
+                  src="kacang2.png"
                   alt="Peyek kacang renyah"
                   className="h-64 w-full rounded-2xl object-cover"
                 />
