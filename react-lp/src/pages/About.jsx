@@ -1,27 +1,15 @@
 const milestones = [
   {
-    year: "1999",
+    year: "2010",
     title: "Awal Perjalanan",
     description:
       "Memulai usaha rumahan dengan resep keluarga yang diwariskan turun-temurun dari generasi sebelumnya.",
   },
   {
-    year: "2010",
-    title: "Ekspansi Produksi",
+    year: "2018–Sekarang",
+    title: "Transformasi Digital",
     description:
-      "Membuka fasilitas produksi modern dan memperkenalkan kontrol kualitas digital pertama kami.",
-  },
-  {
-    year: "2018",
-    title: "Digitalisasi",
-    description:
-      "Membangun sistem pemesanan online serta memperluas distribusi ke seluruh Indonesia.",
-  },
-  {
-    year: "2024",
-    title: "Peyek Andien",
-    description:
-      "Meluncurkan identitas baru dengan fokus pada inovasi rasa dan pengalaman pelanggan yang lebih modern.",
+      "Fokus pada pemesanan online dan peningkatan pelayanan di wilayah Cikarang.",
   },
 ];
 
@@ -45,13 +33,12 @@ export default function About() {
               Berdiri dari dapur kecil di Cikarang, Peyek Andien lahir dari
               kecintaan keluarga kami terhadap cita rasa Nusantara. Kami percaya
               bahwa makanan terbaik dibuat dengan hati, bahan pilihan, dan
-              sentuhan teknologi untuk memastikan kualitasnya selalu konsisten.
+              proses yang terjaga kualitasnya.
             </p>
             <p className="text-base leading-relaxed text-slate-600">
-              Kini kami menggabungkan resep klasik. Setiap
-              peyek digoreng dengan cara tradisional dan dibungkus
-              secara higienis, sehingga tetap renyah dan gurih hingga ke tangan
-              Anda.
+              Kini kami menggabungkan resep klasik. Setiap peyek digoreng dengan
+              cara tradisional dan dibungkus secara higienis, sehingga tetap
+              renyah dan gurih hingga ke tangan Anda.
             </p>
           </div>
 
