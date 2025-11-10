@@ -13,9 +13,9 @@ const highlights = [
       "Kami hanya menggunakan kacang dan rempah lokal terbaik dengan standar kontrol kualitas ketat.",
   },
   {
-    title: "Dapur Modern",
+    title: "Dapur Tradisonal",
     description:
-      "Diproduksi di fasilitas higienis bersistem digital sehingga rasa konsisten dan selalu renyah.",
+      "Diproduksi di fasilitas higienis dengan cara tradisonal sehingga rasa konsisten dan selalu renyah.",
   },
   {
     title: "Pengiriman Cepat",

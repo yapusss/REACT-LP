@@ -39,17 +39,17 @@ export default function About() {
               Tentang Kami
             </span>
             <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">
-              Meracik Keripik Peyek Terbaik Sejak Tahun 1999
+              Meracik Keripik Peyek Terbaik Sejak Tahun 2010
             </h1>
             <p className="text-base leading-relaxed text-slate-600">
-              Berdiri dari dapur kecil di Yogyakarta, Peyek Andien lahir dari
+              Berdiri dari dapur kecil di Cikarang, Peyek Andien lahir dari
               kecintaan keluarga kami terhadap cita rasa Nusantara. Kami percaya
               bahwa makanan terbaik dibuat dengan hati, bahan pilihan, dan
               sentuhan teknologi untuk memastikan kualitasnya selalu konsisten.
             </p>
             <p className="text-base leading-relaxed text-slate-600">
-              Kini kami menggabungkan resep klasik dengan proses modern. Setiap
-              peyek digoreng menggunakan pengontrol suhu digital dan dibungkus
+              Kini kami menggabungkan resep klasik. Setiap
+              peyek digoreng dengan cara tradisional dan dibungkus
               secara higienis, sehingga tetap renyah dan gurih hingga ke tangan
               Anda.
             </p>
