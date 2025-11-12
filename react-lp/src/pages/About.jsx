@@ -1,24 +1,16 @@
 import { useI18n } from "../i18n.jsx";
 const buildMilestones = (t) => [
   {
-    year: "1999",
-    title: t("about_m1_title"),
-    description: t("about_m1_desc"),
-  },
-  {
     year: "2010",
-    title: t("about_m2_title"),
-    description: t("about_m2_desc"),
+    title: "Awal Perjalanan",
+    description:
+      "Memulai usaha rumahan dengan resep keluarga yang diwariskan turun-temurun dari generasi sebelumnya.",
   },
   {
-    year: "2018",
-    title: t("about_m3_title"),
-    description: t("about_m3_desc"),
-  },
-  {
-    year: "2024",
-    title: t("about_m4_title"),
-    description: t("about_m4_desc"),
+    year: "2018–Sekarang",
+    title: "Transformasi Digital",
+    description:
+      "Fokus pada pemesanan online dan peningkatan pelayanan di wilayah Cikarang.",
   },
 ];
 
