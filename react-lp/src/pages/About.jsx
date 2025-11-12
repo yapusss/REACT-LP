@@ -1,31 +1,30 @@
-const milestones = [
+import { useI18n } from "../i18n.jsx";
+const buildMilestones = (t) => [
   {
     year: "1999",
-    title: "Awal Perjalanan",
-    description:
-      "Memulai usaha rumahan dengan resep keluarga yang diwariskan turun-temurun dari generasi sebelumnya.",
+    title: t("about_m1_title"),
+    description: t("about_m1_desc"),
   },
   {
     year: "2010",
-    title: "Ekspansi Produksi",
-    description:
-      "Membuka fasilitas produksi modern dan memperkenalkan kontrol kualitas digital pertama kami.",
+    title: t("about_m2_title"),
+    description: t("about_m2_desc"),
   },
   {
     year: "2018",
-    title: "Digitalisasi",
-    description:
-      "Membangun sistem pemesanan online serta memperluas distribusi ke seluruh Indonesia.",
+    title: t("about_m3_title"),
+    description: t("about_m3_desc"),
   },
   {
     year: "2024",
-    title: "Peyek Andien",
-    description:
-      "Meluncurkan identitas baru dengan fokus pada inovasi rasa dan pengalaman pelanggan yang lebih modern.",
+    title: t("about_m4_title"),
+    description: t("about_m4_desc"),
   },
 ];
 
 export default function About() {
+  const { t } = useI18n();
+  const milestones = buildMilestones(t);
   return (
     <section className="relative overflow-hidden bg-white">
       <div
@@ -36,28 +35,22 @@ export default function About() {
         <div className="grid items-start gap-12 md:grid-cols-2">
           <div className="space-y-6">
             <span className="inline-flex rounded-full bg-blue-100 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-blue-700">
-              Tentang Kami
+              {t("about_badge")}
             </span>
             <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">
-              Meracik Keripik Peyek Terbaik Sejak Tahun 2010
+              {t("about_title")}
             </h1>
             <p className="text-base leading-relaxed text-slate-600">
-              Berdiri dari dapur kecil di Cikarang, Peyek Andien lahir dari
-              kecintaan keluarga kami terhadap cita rasa Nusantara. Kami percaya
-              bahwa makanan terbaik dibuat dengan hati, bahan pilihan, dan
-              sentuhan teknologi untuk memastikan kualitasnya selalu konsisten.
+              {t("about_p1")}
             </p>
             <p className="text-base leading-relaxed text-slate-600">
-              Kini kami menggabungkan resep klasik. Setiap
-              peyek digoreng dengan cara tradisional dan dibungkus
-              secara higienis, sehingga tetap renyah dan gurih hingga ke tangan
-              Anda.
+              {t("about_p2")}
             </p>
           </div>
 
           <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-inner">
             <h2 className="text-lg font-semibold text-slate-900">
-              Tonggak Perjalanan
+              {t("about_milestones")}
             </h2>
             <ol className="mt-6 space-y-6">
               {milestones.map((item) => (

@@ -1,15 +1,22 @@
 import { useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { useI18n } from "./i18n.jsx";
 
-const links = [
-  { to: "/", label: "Home", end: true },
-  { to: "/about", label: "Tentang" },
-  { to: "/produk", label: "Produk" },
-  { to: "/contact", label: "Kontak" },
+const linksKeys = [
+  { to: "/", labelKey: "nav_home", end: true },
+  { to: "/about", labelKey: "nav_about" },
+  { to: "/produk", labelKey: "nav_products" },
+  { to: "/contact", labelKey: "nav_contact" },
 ];
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, lang, setLang } = useI18n();
+  const links = linksKeys.map(({ to, labelKey, end }) => ({
+    to,
+    label: t(labelKey),
+    end,
+  }));
 
   return (
     <div className="font-sans text-slate-800 min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -21,7 +28,7 @@ export default function App() {
                 Peyek Andien
               </span>
               <span className="text-sm text-slate-400">
-                Rasa tradisional dengan sentuhan modern
+                {t("brand_tagline")}
               </span>
             </div>
           </Link>
@@ -43,12 +50,30 @@ export default function App() {
             ))}
           </nav>
 
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center gap-3">
+            <div className="flex items-center">
+              <button
+                type="button"
+                onClick={() => setLang(lang === "id" ? "en" : "id")}
+                className="relative inline-flex h-8 w-14 items-center rounded-full border border-slate-200 bg-white px-1 shadow-sm transition"
+                aria-label="Toggle language"
+                title={lang === "id" ? "Switch to English" : "Ganti ke Bahasa"}
+              >
+                <span
+                  className={`inline-flex h-6 w-6 transform items-center justify-center rounded-full bg-blue-600 text-[10px] font-semibold text-white transition ${
+                    lang === "en" ? "translate-x-6" : ""
+                  }`}
+                >
+                  {lang.toUpperCase()}
+                </span>
+                <span className="sr-only">Language toggle</span>
+              </button>
+            </div>
             <Link
               to="/contact"
               className="inline-flex items-center justify-center rounded-full border border-blue-600 bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:-translate-y-0.5 hover:bg-blue-700"
             >
-              Hubungi Kami
+              {t("cta_contact")}
             </Link>
           </div>
 
@@ -103,12 +128,29 @@ export default function App() {
                   {label}
                 </NavLink>
               ))}
+              <div className="flex items-center justify-between rounded-full bg-slate-50 px-4 py-2">
+                <span className="text-slate-600 text-xs">Language</span>
+                <button
+                  type="button"
+                  onClick={() => setLang(lang === "id" ? "en" : "id")}
+                  className="relative inline-flex h-8 w-14 items-center rounded-full border border-slate-200 bg-white px-1 shadow-sm transition"
+                  aria-label="Toggle language"
+                >
+                  <span
+                    className={`inline-flex h-6 w-6 transform items-center justify-center rounded-full bg-blue-600 text-[10px] font-semibold text-white transition ${
+                      lang === "en" ? "translate-x-6" : ""
+                    }`}
+                  >
+                    {lang.toUpperCase()}
+                  </span>
+                </button>
+              </div>
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-2 inline-flex items-center justify-center rounded-full border border-blue-600 bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
               >
-                Hubungi Kami
+                {t("cta_contact")}
               </Link>
             </div>
           </nav>
@@ -120,7 +162,10 @@ export default function App() {
       </main>
 
       <footer className="mt-12 border-t border-slate-200 bg-white/70 py-6 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} Peyek Andien. Semua hak cipta dilindungi.
+        {t("footer_copyright").replace(
+          "{year}",
+          String(new Date().getFullYear())
+        )}
       </footer>
     </div>
   );

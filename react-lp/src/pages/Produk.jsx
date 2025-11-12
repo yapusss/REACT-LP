@@ -1,25 +1,24 @@
 import { Link } from "react-router-dom";
+import { useI18n } from "../i18n.jsx";
 
 export default function Produk() {
+  const { t } = useI18n();
   const products = [
     {
-      title: "Peyek Kacang",
-      description:
-        "Perpaduan klasik adonan peyek yang renyah dan garing, dipadukan dengan gurihnya kacang tanah pilihan.",
+      title: t("prod_kacang_title"),
+      description: t("prod_kacang_desc"),
       price: 12000,
       image: "kacang2.png",
     },
     {
-      title: "Peyek Kacang Hijau",
-      description:
-        "Sensasi unik peyek gurih dengan taburan kacang hijau yang renyah dan khas di setiap gigitan.",
+      title: t("prod_hijau_title"),
+      description: t("prod_hijau_desc"),
       price: 12000,
       image: "kacang ijo2.png",
     },
     {
-      title: "Peyek Udang Rebon",
-      description:
-        "Cita rasa gurih dan renyah dengan aroma sedap udang rebon asli, memberikan rasa laut yang nikmat.",
+      title: t("prod_rebon_title"),
+      description: t("prod_rebon_desc"),
       price: 12000,
       image: "rebon2.png",
     },
@@ -33,16 +32,12 @@ export default function Produk() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full bg-blue-100 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-blue-700">
-            Produk Unggulan
+            {t("products_badge")}
           </span>
           <h1 className="mt-4 text-3xl font-semibold text-slate-900 md:text-4xl">
-            Varian Peyek Favorit Keluarga Indonesia
+            {t("products_title")}
           </h1>
-          <p className="mt-4 text-slate-500">
-            Setiap kemasan diproses dengan teliti untuk menjaga kerenyahan dan
-            keaslian rasa. Pilih varian yang paling pas untuk momen kebersamaan
-            Anda.
-          </p>
+          <p className="mt-4 text-slate-500">{t("products_desc")}</p>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -62,7 +57,7 @@ export default function Produk() {
                   aria-hidden="true"
                 />
                 <div className="absolute bottom-3 left-4 rounded-full bg-white/90 px-4 py-1 text-xs font-semibold text-blue-700 backdrop-blur">
-                  Favorit keluarga
+                  {t("products_favorite")}
                 </div>
               </div>
               <div className="flex flex-1 flex-col gap-4 p-6">
@@ -82,7 +77,7 @@ export default function Produk() {
                     to="/contact"
                     className="inline-flex items-center justify-center rounded-full border border-blue-600 px-4 py-2 text-xs font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white"
                   >
-                    Pesan Sekarang
+                    {t("products_order_now")}
                   </Link>
                 </div>
               </div>

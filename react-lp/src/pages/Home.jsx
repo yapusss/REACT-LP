@@ -1,30 +1,31 @@
 import { Link } from "react-router-dom";
+import { useI18n } from "../i18n.jsx";
 
-const stats = [
-  { label: "Tahun Pengalaman", value: "25+" },
-  { label: "Varian Rasa", value: "10" },
-  { label: "Pelanggan Puas", value: "15K" },
+const buildStats = (t) => [
+  { label: t("home_stat_years"), value: "25+" },
+  { label: t("home_stat_flavors"), value: "10" },
+  { label: t("home_stat_happy"), value: "15K" },
 ];
 
-const highlights = [
+const buildHighlights = (t) => [
   {
-    title: "Bahan Terpilih",
-    description:
-      "Kami hanya menggunakan kacang dan rempah lokal terbaik dengan standar kontrol kualitas ketat.",
+    title: t("home_highlight_1_title"),
+    description: t("home_highlight_1_desc"),
   },
   {
-    title: "Dapur Tradisonal",
-    description:
-      "Diproduksi di fasilitas higienis dengan cara tradisonal sehingga rasa konsisten dan selalu renyah.",
+    title: t("home_highlight_2_title"),
+    description: t("home_highlight_2_desc"),
   },
   {
-    title: "Pengiriman Cepat",
-    description:
-      "Nikmati peyek favorit Anda dalam kondisi terbaik, dikirim langsung ke depan pintu rumah.",
+    title: t("home_highlight_3_title"),
+    description: t("home_highlight_3_desc"),
   },
 ];
 
 export default function Home() {
+  const { t } = useI18n();
+  const stats = buildStats(t);
+  const highlights = buildHighlights(t);
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700 text-white">
@@ -35,28 +36,24 @@ export default function Home() {
         <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 md:flex-row md:items-center md:py-24">
           <div className="flex-1 space-y-6">
             <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest">
-              Authentic. Crunchy. Modern.
+              {t("home_badge")}
             </span>
             <h1 className="text-4xl font-bold leading-tight md:text-5xl">
-              Keripik Peyek Legendaris dengan Sentuhan Teknologi Modern
+              {t("home_title")}
             </h1>
-            <p className="max-w-xl text-white/80">
-              Peyek Andien memadukan resep turun-temurun dengan produksi modern
-              untuk menghasilkan keripik yang renyah, gurih, dan konsisten di
-              setiap gigitan.
-            </p>
+            <p className="max-w-xl text-white/80">{t("home_desc")}</p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/produk"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-lg shadow-blue-900/40 transition hover:-translate-y-0.5 hover:bg-blue-50"
               >
-                Lihat Koleksi Produk
+                {t("home_view_products")}
               </Link>
               <Link
                 to="/about"
                 className="inline-flex items-center justify-center rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
               >
-                Cerita Kami
+                {t("home_our_story")}
               </Link>
             </div>
           </div>
@@ -82,13 +79,9 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
-            Kenapa Pelanggan Memilih Peyek Andien?
+            {t("home_why_title")}
           </h2>
-          <p className="mt-4 text-slate-500">
-            Kami menghadirkan perpaduan rasa tradisional dengan kualitas modern.
-            Semua varian dibuat untuk menemani momen favorit Anda, dari camilan
-            santai hingga suguhan spesial.
-          </p>
+          <p className="mt-4 text-slate-500">{t("home_why_desc")}</p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {highlights.map((item) => (
