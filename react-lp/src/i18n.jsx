@@ -158,9 +158,9 @@ const translations = {
     contact_po_note:
       "Orders must be placed via pre-order (PO) and cannot visit the production kitchen directly. Orders are placed at least 1 day in advance and our service is available 24 hours.",
     contact_address_label: "Address",
-    contact_address_value: "📍Cikarang Selatan, Bekasi",
+    contact_address_value: "📍Villa Mutiara Cikarang Blok H22/36, Ciantra, Cikarang Selatan, Bekasi",
     contact_phone_label: "Phone & WhatsApp",
-    contact_phone_value: "📱+62 812-1855-1924",
+    contact_phone_value: "📱+62 813-1839-9612",
     contact_email_label: "Email",
     contact_email_value: "halo@peyekit.id",
     contact_quote:
